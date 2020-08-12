@@ -21,7 +21,11 @@ function App() {
 
 {masa.food.foodparts.map(fdPart => {
                 return (
-                 <FoodPart key={fdPart.id} name={fdPart.name} id={fdPart.id}/>
+                 <FoodPart key={fdPart.id} 
+                 name={fdPart.name} 
+                 ingredients={fdPart.ingredientsList}
+                 allowMany={fdPart.allow_many}
+                 id={fdPart.id}/>
               )
             })}
             </div>
