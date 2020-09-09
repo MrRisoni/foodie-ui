@@ -1,6 +1,6 @@
 import React from "react";
 
-function Restaurant(props) {
+function Cuisine(props) {
   return (
     <section>
       <div key={props.data.id} className="row">
@@ -13,4 +13,4 @@ function Restaurant(props) {
   );
 }
 
-export default Restaurant;
+export default Cuisine;

@@ -1,12 +1,14 @@
 import React from "react";
 import axios from "axios";
+import Cuisine from "./Cuisine";
+import Restaurant from "./Restaurant";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       cuisines: [],
-      favorites:[],
+      favorites: [],
       fetched: false
     };
   }
@@ -34,34 +36,18 @@ class Home extends React.Component {
           <div className="row">
             <div className="col-2">
               {this.state.cuisines.map(cus => {
-                return (
-                  <div key={cus.id} className="row">
-                    <div className="col-2">{cus.name}</div>
-                  </div>
-                );
+                return <Cuisine data={cus} />;
               })}
             </div>
 
             <div className="col-8" id="restaurantsSection">
-
-            {this.state.favorites.map(fav => {
-                return (
-                  <div key={fav.id} className="row">
-                    <div className="col-8">{fav.name}</div>
-                  </div>
-                );
+              {this.state.favorites.map(fav => {
+                return <Restaurant data={fav} />;
               })}
 
-
-{this.state.restaurants.map(rest => {
-                return (
-                  <div key={rest.id} className="row">
-                    <div className="col-8">{rest.name}</div>
-                  </div>
-                );
+              {this.state.restaurants.map(rest => {
+                return <Restaurant data={rest} />;
               })}
-
-
             </div>
           </div>
         </section>

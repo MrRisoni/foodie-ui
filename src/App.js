@@ -1,6 +1,8 @@
 import React from "react";
 import Basket from "./Basket";
 import FoodPart from "./FoodPart";
+import Cuisine from "./Cuisine";
+
 const masa = require("./data.json");
 
 function App() {
