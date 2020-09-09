@@ -7,7 +7,7 @@ const DefaultLayout = ({component: Component, ...rest}) => (
         {...rest}
         render={matchProps => (
             <main>
-                <div className="d-flex" id="wrapper">
+                <div className="dlex" id="wrapper">
                     <div id="page-content-wrapper">
                         <div className="container-fluid">
                             <Component {...matchProps} />

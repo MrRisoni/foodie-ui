@@ -5,7 +5,8 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cusines: [],
+      cuisines: [],
+      favorites:[],
       fetched: false
     };
   }
@@ -15,10 +16,12 @@ class Home extends React.Component {
     console.log(process.env);
 
     axios
-      .get(`${process.env.REACT_APP_API_ENDPOINT}/api/browse`)
+      .get(`${process.env.REACT_APP_API_ENDPOINT}/api/home`)
       .then(responseObj => {
         self.setState({
-          cusines: responseObj.data.cusines,
+          cuisines: responseObj.data.cuisines,
+          favorites: responseObj.data.favorites,
+          restaurants: responseObj.data.restaurants,
           fetched: true
         });
       });
@@ -30,7 +33,7 @@ class Home extends React.Component {
         <section>
           <div className="row">
             <div className="col-2">
-              {this.state.cusines.map(cus => {
+              {this.state.cuisines.map(cus => {
                 return (
                   <div key={cus.id} className="row">
                     <div className="col-2">{cus.name}</div>
@@ -39,7 +42,27 @@ class Home extends React.Component {
               })}
             </div>
 
-            <div className="col-8"></div>
+            <div className="col-8" id="restaurantsSection">
+
+            {this.state.favorites.map(fav => {
+                return (
+                  <div key={fav.id} className="row">
+                    <div className="col-8">{fav.name}</div>
+                  </div>
+                );
+              })}
+
+
+{this.state.restaurants.map(rest => {
+                return (
+                  <div key={rest.id} className="row">
+                    <div className="col-8">{rest.name}</div>
+                  </div>
+                );
+              })}
+
+
+            </div>
           </div>
         </section>
       );
