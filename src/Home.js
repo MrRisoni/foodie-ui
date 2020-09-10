@@ -35,9 +35,9 @@ class Home extends React.Component {
         <section>
           <div className="row">
             <div className="col-2">
-              {this.state.cuisines.map(cus => {
-                return <Cuisine data={cus} />;
-              })}
+                {this.state.cuisines.map(cus => {
+                  return <Cuisine data={cus} />;
+                })}
             </div>
 
             <div className="col-8" id="restaurantsSection">

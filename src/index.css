@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffcc;
 }
 
 code {
@@ -16,7 +17,44 @@ code {
   margin-bottom: 15px;
 }
 
+.karta {
+  width: 175px;
+  display: block;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
 
-#restaurantsSection {
-  margin-left: 35px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 0px solid #000000;
+  background-color:white;
+}
+
+
+
+
+.kartaRestau {
+  width: 875px;
+  display: block;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 0px solid #000000;
+  background-color:white;
+}
+
+
+
+.cusinneDiv {
+  text-align:center;
+  margin-top: 15px;
+}
+
+.restaurantDiv {
+  margin-top: 15px;
 }

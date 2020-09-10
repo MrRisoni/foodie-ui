@@ -1,16 +1,28 @@
-import React from "react";
+import React from 'react';
 
 function Restaurant(props) {
-  return (
-    <section>
-      <div key={props.data.id} className="row">
-        <div className="col-2"></div>
-        <div class="card">
-          <div class="card-body">{props.data.name}</div>
-        </div>
-      </div>
-    </section>
-  );
+    return (
+           <div  className="row restaurantDiv">
+                    <div className="col-8">
+           <div class="kartaRestau">
+
+   <diiv className="row"> 
+   <div className="col-5 offset-2">
+    {props.data.name}
+    </div>
+
+    <div className="col-2">
+
+    <button type="button" class="btn btn-warning btn-sm">Order!</button>
+    </div>
+    </diiv>
+
+  
+  </div>
+</div>
+</div>
+    )
 }
+
 
 export default Restaurant;
