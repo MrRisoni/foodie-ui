@@ -2,16 +2,15 @@ import React from "react";
 
 function Cuisine(props) {
   return (
-      <div className="row cusinneDiv">
-        <div className="col-10">
+    <div className="row cusineDiv">
+      <div className="col-10">
         <div class="karta">
-            <input type="checkbox" id="vehicle1" name="vehicle1"/>
+          <input type="checkbox" id="vehicle1" name="vehicle1" />
 
-            {props.data.name}
-         
+          {props.data.name}
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 
